@@ -13,14 +13,14 @@ La página `/gimli` es estática y se sirve desde GitHub Pages. `gimli.adriansr.
 | Código y contenido de la página | Alteración de HTML, JS o enlaces | Revisión de cambios antes de publicar; pendiente comprobar MFA y protección de la rama de publicación. |
 | Visitantes | Carga de recursos maliciosos si se introduce una inyección | Política de seguridad de contenido en `gimli.html`: scripts, estilos, imágenes y fuentes locales; solo se permite el marco futuro de `youtube-nocookie.com`. |
 | Tráfico | Intercepción o modificación en HTTP | El dominio público redirigía de HTTP a HTTPS y enviaba HSTS `max-age=31556952` en la revisión del 3 de noviembre. Volver a comprobar tras publicar. |
-| Privacidad | Envío de datos de navegación a servicios externos | Fuentes alojadas en este repositorio y política `no-referrer`. El vídeo no se carga hasta que se configure su ID; cuando se configure, usará `youtube-nocookie.com` y carga diferida. |
+| Privacidad | Envío de datos de navegación a servicios externos | Fuentes y futuro vídeo alojados en este repositorio; política `no-referrer`. El vídeo no se carga mientras `VIDEO_FILE` esté vacío. |
 | Integridad de la descarga | Sustitución del ZIP por otro contenido | El ZIP será revisado antes de publicar; añadir suma SHA-256 visible y verificar que corresponda al código etiquetado final. |
 
 ## Cambios preparados en la página 2.0
 
 - Se han retirado las peticiones a Google Fonts: Inter y Marcellus SC se sirven desde `fonts/`, con sus licencias OFL.
-- `gimli.html` declara una política CSP por `meta` que limita scripts, estilos, fuentes, imágenes, conexiones, marcos, objetos, formularios y workers. Los dos estilos en línea del gráfico ilustrativo se sustituyeron por CSS local.
-- Se declara `referrer=no-referrer`. El futuro iframe de YouTube solo solicitará los permisos `encrypted-media` y `picture-in-picture` y no enviará la URL de origen como referrer.
+- `gimli.html` declara una política CSP por `meta` que limita scripts, estilos, fuentes, imágenes, medios, conexiones, marcos, objetos, formularios y workers. Los dos estilos en línea del gráfico ilustrativo se sustituyeron por CSS local.
+- Se declara `referrer=no-referrer`. El futuro vídeo MP4 se servirá desde el mismo sitio, sin iframe ni carga desde YouTube.
 - Los enlaces externos que abren una pestaña nueva ya usan `rel="noopener noreferrer"`.
 - Comprobación local: la página carga con la CSP activa, las fuentes locales se cargan, el gráfico conserva su ancho y la consola del navegador no muestra errores ni avisos.
 - Una búsqueda de patrones de claves privadas, tokens y claves API, así como de nombres de archivo sospechosos, en los cinco commits locales y sus archivos versionados no encontró coincidencias. Este análisis de patrones no detecta todos los tipos posibles de secreto ni inspecciona el contenido de recursos binarios.

@@ -1,17 +1,20 @@
 document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(tab=>tab.setAttribute('aria-selected',String(tab===button)));document.getElementById('command').textContent=button.dataset.command;}));
 
-// Set this to a YouTube video ID after the demonstration has been reviewed.
-// Example: const VIDEO_ID = 'dQw4w9WgXcQ';
-const VIDEO_ID = '';
-if (VIDEO_ID && /^[a-zA-Z0-9_-]{11}$/.test(VIDEO_ID)) {
-  const frame = document.createElement('iframe');
-  frame.src = `https://www.youtube-nocookie.com/embed/${VIDEO_ID}`;
-  frame.title = 'Demostración de GimliForge 2.0';
-  frame.loading = 'lazy';
-  frame.referrerPolicy = 'no-referrer';
-  frame.allow = 'encrypted-media; picture-in-picture';
-  frame.allowFullscreen = true;
-  document.getElementById('video-slot').replaceChildren(frame);
+// Cuando esté listo el vídeo final, súbelo a este repositorio y escribe aquí su ruta.
+// Ejemplo: const VIDEO_FILE = '/GimliForge_2.0_demo.mp4';
+const VIDEO_FILE = '';
+if (VIDEO_FILE && /^\/[a-zA-Z0-9_.-]+\.mp4$/.test(VIDEO_FILE)) {
+  const video = document.createElement('video');
+  video.src = VIDEO_FILE;
+  video.controls = true;
+  video.preload = 'metadata';
+  video.playsInline = true;
+  video.setAttribute('aria-label', 'Demostración de GimliForge 2.0');
+  const fallback = document.createElement('a');
+  fallback.href = VIDEO_FILE;
+  fallback.textContent = 'Descargar el vídeo MP4';
+  video.append(fallback);
+  document.getElementById('video-slot').replaceChildren(video);
 }
 
 const canvas = document.getElementById('forge-effects');

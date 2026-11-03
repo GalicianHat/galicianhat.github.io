@@ -119,7 +119,7 @@ section{padding:70px 0}
 .video-slot strong{font-family:'Marcellus SC',Georgia,serif;font-size:20px;color:var(--gold2)}
 .video-slot small{color:var(--muted)}
 .play-mark{display:grid;place-items:center;width:74px;height:74px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-size:25px;margin-bottom:12px;box-shadow:0 0 25px #c779404d;animation:forge-breathe 3s ease-in-out infinite alternate}
-.video-slot iframe{width:100%;height:100%;border:0}
+.video-slot video{width:100%;height:100%;display:block;object-fit:contain;background:#080b08}
 @keyframes forge-breathe{from{box-shadow:0 20px 60px #0009,0 0 0 #c7794000}to{box-shadow:0 20px 60px #0009,0 0 32px #c7794038}}
 @keyframes bar-ignite{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @media(prefers-reduced-motion:reduce){.btn,.step{transition:none}.panel,.play-mark,.track i{animation:none}#forge-effects{display:none}}
