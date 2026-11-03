@@ -23,14 +23,14 @@ La página `/gimli` es estática y se sirve desde GitHub Pages. `gimli.adriansr.
 - Se declara `referrer=no-referrer`. El futuro iframe de YouTube solo solicitará los permisos `encrypted-media` y `picture-in-picture` y no enviará la URL de origen como referrer.
 - Los enlaces externos que abren una pestaña nueva ya usan `rel="noopener noreferrer"`.
 - Comprobación local: la página carga con la CSP activa, las fuentes locales se cargan, el gráfico conserva su ancho y la consola del navegador no muestra errores ni avisos.
-- Una búsqueda de patrones de claves privadas, tokens y claves API en los archivos actualmente versionados no encontró coincidencias. Esto no sustituye la revisión del historial ni de los recursos binarios.
+- Una búsqueda de patrones de claves privadas, tokens y claves API, así como de nombres de archivo sospechosos, en los cinco commits locales y sus archivos versionados no encontró coincidencias. Este análisis de patrones no detecta todos los tipos posibles de secreto ni inspecciona el contenido de recursos binarios.
 
 ## Límites y tareas pendientes
 
 - Una CSP declarada mediante `meta` protege **solo** `gimli.html`. La portada del portfolio y la copia histórica `gimli-v1.html` no heredan esa política.
 - `frame-ancestors` (protección frente a que otro sitio incruste la página), CSP en modo de solo informe y otros encabezados HTTP requieren configurarse en el servidor o en una capa de distribución; no se pueden imponer con un archivo `meta` de GitHub Pages. Si se quiere esa protección para todo `adriansr.com`, estudiar una capa de distribución que controle encabezados o una migración de alojamiento, probarla antes de cambiar el dominio y documentar el resultado.
 - Revisar MFA de la cuenta GitHub, acceso al repositorio y protección de la rama que publica la web. No se han cambiado configuraciones de cuenta ni DNS.
-- Antes de publicar, buscar secretos y ficheros privados en **todo** el repositorio y su historial; confirmar que los documentos, audio y vídeo presentes están destinados a ser públicos.
+- Antes de publicar, confirmar manualmente que los documentos, audio, vídeo y demás recursos binarios presentes en el repositorio están destinados a ser públicos; repetir el análisis de secretos sobre la versión definitiva.
 - Después de publicar, repetir las pruebas de HTTPS, redirección del subdominio, cabeceras, CSP, recursos cargados y enlaces. El resultado local no demuestra la configuración final de GitHub Pages.
 
 Fuentes: [GitHub Pages y HTTPS](https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https), [dominios personalizados de GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site), [CSP en `meta`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP), [`frame-ancestors`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors).
