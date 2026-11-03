@@ -9,8 +9,10 @@ La URL `gimli.adriansr.com` redirige a `https://adriansr.com/gimli`. Esa página
 - `gimli.js`: selector de comandos para Windows, macOS y Linux.
 - `gimli.js` contiene también `VIDEO_ID`. Cuando el vídeo esté listo, sustituye la cadena vacía por el ID de once caracteres de YouTube; se insertará en el espacio reservado de la sección Vídeo.
 - `gimli-bg.jpg`: imagen de portada ya existente en el repositorio.
+- `fonts/`: tipografías locales de la página y sus licencias. Mantén esta carpeta junto a `gimli.css` para evitar peticiones a Google Fonts.
 - `gimli-v1.html` y `gimli-v1-assets/`: copia estática de la página original 1.0. La página nueva enlaza a ese archivo para conservar su historia.
 - `GimliForge-2.0-preview.zip`: paquete enlazado desde la página preliminar.
+- `SEGURIDAD_GIMLI.md`: revisión de seguridad, controles preparados y tareas pendientes antes de publicar.
 
 ## Actualizar desde cualquier ordenador
 

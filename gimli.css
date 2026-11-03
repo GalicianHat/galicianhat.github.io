@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Cinzel:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@font-face{font-family:'Marcellus SC';src:url('/fonts/MarcellusSC-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url('/fonts/Inter-400.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url('/fonts/Inter-600.ttf') format('truetype');font-style:normal;font-weight:600;font-display:swap}
 :root{--night:#0a0b0a;--stone:#141611;--stone2:#1d2119;--line:#4a4936;--gold:#d8bb78;--gold2:#f3dfa4;--text:#f1ecdd;--muted:#b7b7a4;--ember:#c77940}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -38,12 +40,12 @@ section{padding:104px 0}
 .section-head{max-width:760px;margin:0 auto 52px;text-align:center}
 .section-head h2,section h2{font-size:clamp(32px,4vw,51px);margin:15px 0 18px}
 .section-head p,.lead{font-size:17px;color:var(--muted)}
-.rune{color:var(--gold);font-family:Cinzel,serif;font-size:24px;letter-spacing:.5em;text-align:center;opacity:.8;margin-bottom:15px}
+.rune{color:var(--gold);font-family:'Marcellus SC',Georgia,serif;font-size:24px;letter-spacing:.5em;text-align:center;opacity:.8;margin-bottom:15px}
 .journey{background:linear-gradient(180deg,#0a0b0a8c,#121710af 55%,#0a0b0a8c)}
 .step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .step{background:linear-gradient(155deg,#25291e,#111710);border:1px solid var(--line);padding:34px;position:relative;min-height:255px}
 .step::before{content:"";position:absolute;inset:6px;border:1px solid #a7965355;pointer-events:none}
-.step .number{font-family:Cinzel,serif;font-size:34px;color:var(--gold)}
+.step .number{font-family:'Marcellus SC',Georgia,serif;font-size:34px;color:var(--gold)}
 .step h3{font-size:23px;margin:26px 0 10px}
 .step p{margin:0;color:var(--muted);font-size:14px}
 .split{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
@@ -54,11 +56,11 @@ section{padding:104px 0}
 .panel small{color:var(--muted)}
 .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px 0}
 .metric{background:#0e1610;border:1px solid #4b533d;padding:12px}
-.metric strong{display:block;color:var(--gold2);font:29px Cinzel,serif}
+.metric strong{display:block;color:var(--gold2);font:29px 'Marcellus SC',Georgia,serif}
 .metric span{font-size:11px;color:var(--muted)}
 .risk{display:grid;grid-template-columns:55px 1fr 20px;gap:11px;align-items:center;margin:13px 0;font-size:13px}
 .track{height:7px;background:#31382b}
-.track i{display:block;height:100%;background:var(--ember)}
+.track i{display:block;width:50%;height:100%;background:var(--ember)}
 .risk:nth-last-child(1) i{background:var(--gold)}
 .feature-list{list-style:none;padding:0;margin-top:26px}
 .feature-list li{padding:13px 0;border-bottom:1px solid var(--line);color:var(--muted)}

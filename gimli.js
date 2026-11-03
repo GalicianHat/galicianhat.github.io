@@ -8,8 +8,8 @@ if (VIDEO_ID && /^[a-zA-Z0-9_-]{11}$/.test(VIDEO_ID)) {
   frame.src = `https://www.youtube-nocookie.com/embed/${VIDEO_ID}`;
   frame.title = 'Demostración de GimliForge 2.0';
   frame.loading = 'lazy';
-  frame.referrerPolicy = 'strict-origin-when-cross-origin';
-  frame.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+  frame.referrerPolicy = 'no-referrer';
+  frame.allow = 'encrypted-media; picture-in-picture';
   frame.allowFullscreen = true;
   document.getElementById('video-slot').replaceChildren(frame);
 }
