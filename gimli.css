@@ -32,7 +32,6 @@ nav{min-height:78px;display:flex;justify-content:space-between;align-items:cente
 .btn:hover{transform:translateY(-2px)}
 .btn.primary{background:linear-gradient(#efd797,#c8a761);color:#16170f;border-color:#e6d099}
 .btn.secondary{color:var(--gold2);background:#070a08b8}
-.hero-note{margin-top:34px;font-size:12px;color:#d3c8a9;letter-spacing:.08em}
 .hero .eyebrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .hero-logo{font:800 clamp(22px,3vw,36px)/1.1 Consolas,'Courier New',monospace;letter-spacing:.01em;color:var(--text);text-shadow:3px 3px 0 #334155;white-space:nowrap}
 .hero-version{border:1px solid var(--gold);padding:5px 9px;font:700 10px/1.4 Inter,sans-serif;letter-spacing:.15em;color:var(--gold2)}
