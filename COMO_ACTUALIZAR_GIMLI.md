@@ -8,6 +8,7 @@ La URL `gimli.adriansr.com` redirige a `https://adriansr.com/gimli`. Esa página
 - `gimli.css`: colores, tipografía y presentación adaptable a móvil.
 - `gimli.js`: selector de comandos para Windows, macOS y Linux.
 - `gimli.js` contiene también `VIDEO_FILE`. Cuando el vídeo final esté listo, sube su MP4 a la raíz del repositorio y sustituye la cadena vacía por su ruta, por ejemplo `'/GimliForge_2.0_demo.mp4'`. Se reproducirá en la sección Vídeo sin YouTube.
+- Por ahora `VIDEO_FILE` está vacío a propósito: la página muestra un espacio reservado y no necesita un vídeo para publicarse.
 - `gimli-bg.jpg`: imagen de portada ya existente en el repositorio.
 - `fonts/`: tipografías locales de la página y sus licencias. Mantén esta carpeta junto a `gimli.css` para evitar peticiones a Google Fonts.
 - `gimli-v1.html` y `gimli-v1-assets/`: copia estática de la página original 1.0. La página nueva enlaza a ese archivo para conservar su historia.
@@ -15,6 +16,8 @@ La URL `gimli.adriansr.com` redirige a `https://adriansr.com/gimli`. Esa página
 - `SEGURIDAD_GIMLI.md`: revisión de seguridad, controles preparados y tareas pendientes antes de publicar.
 
 ## Actualizar desde cualquier ordenador
+
+La página 2.0 está preparada en la rama local `feature/gimli-2.0-site`. Para publicarla por primera vez, sube esa rama al repositorio y crea una pull request hacia `main`. Al fusionarla, GitHub Pages publicará los archivos de la raíz. El archivo `GimliForge-web-preview.zip` sirve para revisar o trasladar los archivos, pero GitHub no despliega el contenido de un ZIP subido como un único archivo.
 
 1. Entra en `https://github.com/GalicianHat/galicianhat.github.io` con tu cuenta.
 2. Abre el archivo que quieras modificar. Pulsa el icono del lápiz (**Edit this file**). Para sustituir una imagen o el ZIP, usa **Add file → Upload files**.
