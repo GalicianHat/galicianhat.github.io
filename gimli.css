@@ -124,6 +124,17 @@ section{padding:70px 0}
 .memory-slot strong{font-family:'Marcellus SC',Georgia,serif;font-size:22px;color:var(--gold2)}
 .memory-slot small{color:var(--muted)}
 .memory-mark{display:grid;place-items:center;width:65px;height:80px;border:1px solid var(--gold);color:var(--gold);font-size:27px;margin-bottom:12px;box-shadow:0 0 24px #c7794038}
+.pdf-section{background:linear-gradient(180deg,#0b100cd9,#161a12e8);border-top:1px solid var(--line)}
+.pdf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pdf-card{border:1px solid #756944;background:linear-gradient(155deg,#25291e,#111710);padding:28px;min-width:0}
+.pdf-card h3{font-size:25px;color:var(--gold2);margin:0 0 14px}
+.pdf-card p{color:var(--muted);font-size:14px;margin:0 0 18px}
+.pdf-card a{display:inline-block;color:var(--gold2);font-weight:700;border-bottom:1px solid var(--gold);margin-top:6px}
+.pdf-card a:hover,.honesty a:hover{color:#fff1c6}
+.pdf-card code{display:block;background:#080d09;border:1px solid var(--line);padding:12px;color:#efe0b1;font:13px/1.6 Consolas,monospace;overflow-wrap:anywhere;margin-bottom:14px}
+.pdf-check{text-align:center;color:var(--muted);margin:28px 0 0}
+.pdf-check code{color:var(--gold2);font:14px Consolas,monospace}
+@media(max-width:850px){.pdf-grid{grid-template-columns:1fr}}
 @keyframes forge-breathe{from{box-shadow:0 20px 60px #0009,0 0 0 #c7794000}to{box-shadow:0 20px 60px #0009,0 0 32px #c7794038}}
 @keyframes bar-ignite{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @media(prefers-reduced-motion:reduce){.btn,.step{transition:none}.panel,.play-mark,.track i{animation:none}#forge-effects{display:none}}
